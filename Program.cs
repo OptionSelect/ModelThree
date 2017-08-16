@@ -4,28 +4,6 @@ namespace ModelThree
 {
     class Program
     {
-        public class backPack
-        {
-            //Properties
-            public string Laptop { get; set; }
-            public string WaterBottle { get; set; }
-            public string Umbrella { get; set; }
-
-            public override string ToString()
-            {
-                return $"My backpack contains: {Laptop}, {Umbrella}, and {WaterBottle}.";
-            }
-
-            //Constructor
-            public backPack(string laptop, string waterbottle, string umbrella)
-            {
-                Console.WriteLine("Creating a new Pack.");
-                Laptop = laptop;
-                WaterBottle = waterbottle;
-                Umbrella = umbrella;
-            }
-        }
-
         public class Arsenal
         {
             public string Striker { get; set; }
@@ -66,13 +44,17 @@ namespace ModelThree
         }
         static void Main(string[] args)
         {
-            var blastBeard = new DnDChar("Blastbeard", "Greatsword", "Black");
-            var team = new Arsenal("Alexandre Lacazette", "Arsene Wenger", "Olivier Giroud");
-            var backpackerino = new backPack("Mac", "Futurespace", "Small Green Umbrella");
+            // var blastBeard = new DnDChar("Blastbeard", "Greatsword", "Black");
+            // var team = new Arsenal("Alexandre Lacazette", "Arsene Wenger", "Olivier Giroud");
+            var backpackerino = new Backpack("Mac", "Futurespace", "Small Green Umbrella");
+            var fanny = new FannyPack("Netbook", "Mini", "Super small");
+            var messy = new MessengerBag("Linux Machine", "Gallon Jug", "Full Poncho");
 
-            Console.WriteLine(blastBeard);
-            Console.WriteLine(team);
+            // Console.WriteLine(blastBeard);
+            // Console.WriteLine(team);
             Console.WriteLine(backpackerino);
+            Console.WriteLine(fanny);
+            Console.WriteLine(messy);
         }
     }
 }
